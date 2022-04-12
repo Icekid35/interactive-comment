@@ -52,7 +52,7 @@ margin-top: 2rem;
 }
 .commentholder[data-reply="true"]{
   width: 90%;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 .commentholder[data-reply=true]::before{
   content: '';

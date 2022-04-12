@@ -47,7 +47,7 @@ function CommentBox(props) {
   let textref=useRef()
   let { text, initial, replies ,changereply,hidereply} = props
 let [update,reupdate]=useState(0)
-  let isreply={'data-reply':`${props.data-reply ? true : false}`}
+  
 
   return (
     <>
@@ -115,7 +115,7 @@ function Card(props) {
     comment.replies.splice(id,1)
     setChange(Math.random())
   }
-  let isreply={'data-reply':`${props.data-reply ? true : false}`}
+  
   return (
     <>
       <Popup delete={deletecurrent} setshowpop={setshowpop} show={ showpop}/>
