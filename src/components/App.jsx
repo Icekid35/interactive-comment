@@ -49,7 +49,9 @@ function CommentBox(props) {
 let [update,reupdate]=useState(0)
   return (
     <>
-      <div {...props} className="box commentholder">
+  
+      <div data-reply={props.data-reply} className="box commentholder"> 
+     
       <img alt='img' src={currentuser.image.png} />
 
         <textarea ref={ textref} defaultValue={initial ? `@${initial}  ` : '' } placeholder="Type in you comment">
@@ -114,7 +116,7 @@ function Card(props) {
   return (
     <>
       <Popup delete={deletecurrent} setshowpop={setshowpop} show={ showpop}/>
-    <div {...props}className="commentholder">
+    <div data-reply={props.data-reply} className="commentholder">
     <div className='bigscreen rateholder'>
       <div className="inner">
 
@@ -294,7 +296,7 @@ function Card(props) {
                               deletecurren(index)
                             }
                             return (
-                        <Card key={com.id} delete={deletecur} changereply={changereply} data-reply comment={com} for={comment.user.username} />
+                        <Card key={com.id} delete={deletecur} changereply={changereply} data-reply={true} comment={com} for={comment.user.username} />
                       )
                     })
                     }

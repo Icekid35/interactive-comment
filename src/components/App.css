@@ -48,13 +48,13 @@ width:100%;
 border-radius: 10px;
 display:flex;
 background-color: hsl(0, 0%, 100%);
-margin-top: 10px;
+margin-top: 25px;
 }
-.commentholder[data-reply]{
+.commentholder[data-reply=true]{
   width: 90%;
   margin-top: 5px;
 }
-.commentholder[data-reply]::before{
+.commentholder[data-reply=true]::before{
   content: '';
   background-color: hsl(211, 10%, 45%);
   height: calc(calc(100 )  + 10px);
@@ -237,11 +237,13 @@ cursor: context-menu;
   textarea{
     width:80%;
     /* max-width: 600px; */
-   min-height:4rem;
+   min-height:4.6rem;
    max-height: 7rem;
    border-radius: 10px;
    padding: 5px 10px;
    margin: 0px 5px;
+   outline: none;
+   border: 1px solid gray
   }
   .btn{
     outline: none;
