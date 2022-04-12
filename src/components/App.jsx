@@ -47,10 +47,11 @@ function CommentBox(props) {
   let textref=useRef()
   let { text, initial, replies ,changereply,hidereply} = props
 let [update,reupdate]=useState(0)
+let isreply=props.data-reply ? true : false
   return (
     <>
   
-      <div {...props} className="box commentholder"> 
+      <div data-reply={isreply} className="box commentholder"> 
      
       <img alt='img' src={currentuser.image.png} />
 
@@ -113,10 +114,11 @@ function Card(props) {
     comment.replies.splice(id,1)
     setChange(Math.random())
   }
+  let isreply= props.data-reply ? true : false
   return (
     <>
       <Popup delete={deletecurrent} setshowpop={setshowpop} show={ showpop}/>
-    <div {...props} className="commentholder">
+    <div data-reply={isreply} className="commentholder">
     <div className='bigscreen rateholder'>
       <div className="inner">
 
