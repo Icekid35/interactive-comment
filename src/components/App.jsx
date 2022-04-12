@@ -115,7 +115,7 @@ function Card(props) {
     comment.replies.splice(id,1)
     setChange(Math.random())
   }
-  consoe.log(props)
+  console.log(props)
   console.log(props.data-reply)
   return (
     <>
