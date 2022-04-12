@@ -48,7 +48,7 @@ width:100%;
 border-radius: 10px;
 display:flex;
 background-color: hsl(0, 0%, 100%);
-margin-top: 25px;
+margin-top: 2rem;
 }
 .commentholder[data-reply=true]{
   width: 90%;
@@ -237,11 +237,11 @@ cursor: context-menu;
   textarea{
     width:80%;
     /* max-width: 600px; */
-   min-height:4.6rem;
-   max-height: 7rem;
+   min-height:5rem;
+   max-height: 8rem;
    border-radius: 10px;
    padding: 5px 10px;
-   margin: 0px 5px;
+   margin: 7px 5px;
    outline: none;
    border: 1px solid gray
   }
