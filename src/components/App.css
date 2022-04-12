@@ -245,6 +245,7 @@ cursor: context-menu;
    outline: none;
    border: none;
    resize: none;
+   border-color: transparent;
   }
   .btn{
     outline: none;
