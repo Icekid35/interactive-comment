@@ -243,7 +243,7 @@ cursor: context-menu;
    padding: 5px 10px;
    margin: 7px 5px;
    outline: none;
-   border: 1px solid gray
+   border: none;
   }
   .btn{
     outline: none;
