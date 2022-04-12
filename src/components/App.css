@@ -50,7 +50,7 @@ display:flex;
 background-color: hsl(0, 0%, 100%);
 margin-top: 2rem;
 }
-.commentholder[data-reply=true]{
+.commentholder[data-reply="true"]{
   width: 90%;
   margin-top: 5px;
 }
