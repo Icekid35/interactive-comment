@@ -1,0 +1,350 @@
+@font-face {
+  font-family:manrope ;
+  src: url("../Manrope-VariableFont_wght.ttf");
+}
+
+*{
+  transition:all 170ms ease-in-out ;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+
+
+
+.container{
+  font-family: manrope,sans-serif;
+  font-weight: 400;
+  /* font-weight: 550; */
+
+  width:  90%;
+ max-width:  725px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+/* justify-content: center; */
+align-items: flex-end;
+/* height: 100vh; */
+padding: 0px 15px;
+
+}
+body{
+  color:hsl(211, 10%, 45%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(228, 33%, 97%) ;
+}
+
+
+.commentholder{
+  overflow: hidden;
+  overflow-wrap: break-word;
+  hyphens: auto;
+width:100%;
+border-radius: 10px;
+display:flex;
+background-color: hsl(0, 0%, 100%);
+margin-top: 10px;
+}
+.commentholder[data-reply]{
+  width: 90%;
+  margin-top: 5px;
+}
+.commentholder[data-reply]::before{
+  content: '';
+  background-color: hsl(211, 10%, 45%);
+  height: calc(calc(100 )  + 10px);
+  width: 1px;
+  transform: translate(calc(-3vw),10px);
+
+}
+
+.rateholder{
+display: flex;
+
+
+flex-direction: column;
+padding:   20px 15px;
+
+}
+
+.rateholder .inner{
+font-weight: 600;
+  background-color: hsl(228, 33%, 97%);
+  color:hsl(239, 57%, 85%);
+  border-radius:10px;
+  padding:10px;
+  text-align: center;
+}
+.rateholder button{
+  font-size: 1.3rem;
+  color:inherit;
+  background-color: inherit;
+  outline: none;
+  border: none;
+}
+.rateholder button:hover{
+  cursor: pointer;
+  color: hsl(238, 40%, 52%);
+}
+.rate{
+  color: hsl(238, 40%, 52%);
+
+}
+.residue{
+  display: none;
+  justify-content: space-between;
+
+align-items: center;
+  
+}
+
+
+
+.othersholder{
+display: flex;
+flex-direction: column;
+width: 100%;
+
+padding: 15px 5px;
+padding-bottom: 20px;
+}
+
+.othersholder .topbar{
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+
+}
+.reply{
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  color:#5357B6;
+padding: 5px;
+}
+.reply .delete{
+  color:hsl(358, 79%, 66%);
+  margin-left: 15px;
+}
+.reply .delete svg{
+  fill:hsl(358, 79%, 66%);
+}
+.reply .delete:hover svg{
+  fill:hsl(357, 100%, 86%);
+}
+.reply .delete:hover{
+  color:hsl(357, 100%, 86%);
+}
+.reply div:hover{
+  cursor: pointer;
+  color:hsl(239, 57%, 85%);
+  
+}
+.reply div{
+  display: flex;
+  justify-content: center;
+  margin: 3px;
+}
+.reply div:hover svg{
+  fill:hsl(239, 57%, 85%);
+  cursor:pointer;
+}
+.reply svg{
+  fill:#5357B6;
+}
+.reply span{
+  margin-left: 5px;
+}
+.text{
+
+  margin-top: 10px;
+max-width: calc(100%);
+
+/* text-overflow: ; */
+}
+.text span{
+ word-break: break-word;
+  /* overflow-wrap: hypenate; */
+  /* word-wrap: break-word; */
+  hyphens: auto;
+
+}
+.othersholder .topbar .firstbar{
+  align-items: center;
+display: flex;
+justify-content: space-evenly;
+}
+
+.othersholder .topbar .firstbar div{
+  padding:10px;
+  }
+  .othersholder .topbar .firstbar .name{
+   font-weight: 600;
+   color: hsl(211, 10%, 45%);
+   font-size: 1rem;
+   /* padding:3px; */
+    }
+.commentholder img{
+  width: 35px;
+}
+.you{
+  background-color:hsl(238, 40%, 52%) ;
+  color: hsl(0, 0%, 100%);
+  max-height: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  padding: 1px 10px;
+  border-radius: 5px;
+  /* text-transform: capitalize; */
+}
+.for{
+  color:hsl(238, 40%, 52%) ;
+
+cursor: context-menu;
+  font-weight: bold;
+  padding: 3px ;
+  border-radius: 5px;
+  user-select: none;
+}
+@media screen and (max-width:650px) {
+  .rateholder .inner{
+    flex-direction: row;
+  display: flex;
+  padding: 4px;
+  justify-content: center;
+    }
+    .residue{
+      display:flex;
+    }
+    .bigscreen{
+      display:none;
+    }
+  }
+.box{
+  max-width: 90%;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px;
+}
+  textarea{
+    width:80%;
+    /* max-width: 600px; */
+   min-height:4rem;
+   max-height: 7rem;
+   border-radius: 10px;
+   padding: 5px 10px;
+   margin: 0px 5px;
+  }
+  .btn{
+    outline: none;
+    border: none;
+    background-color:hsl(238, 40%, 52%) ;
+    color: hsl(0, 0%, 100%);
+    height:2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    padding: 1px 10px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+  }
+ .btn:hover{
+ cursor: pointer;
+background-color:hsl(239, 57%, 85%);
+ }
+  textarea:focus{
+outline: none;
+border: 1px groove color ;
+  }
+  textarea::-webkit-scrollbar{
+    background-color:hsl(228, 33%, 97%) ;
+    cursor: pointer ;
+  }
+  textarea::-webkit-scrollbar-thumb{
+    background-color:hsl(239, 57%, 85%) ;
+
+    border-radius: 5px;
+  }
+  textarea::-webkit-scrollbar-corner{
+   display: none;
+max-height: 1px;
+opacity: 0;
+  }
+
+  .popup{
+background-color:   hsl(240, 11%, 20%);
+position: fixed;
+width: 100vw;
+height: 100vh;
+inset: 0;
+opacity: .65;
+z-index: 2;
+pointer-events:visibleFill;
+  }
+  .popupbox{
+    background-color: hsl(0, 0%, 100%);
+    position: fixed;
+    width: 80vw;
+    max-width: 300px;
+    aspect-ratio: 1;
+    height: 30vh;
+    max-height: 300px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+
+    z-index: 5;
+  }
+  .pophead{
+    /* color:black; */
+    font-weight: 700;
+    font-size: 1.1rem;
+    /* text-align: left; */
+  }
+  .poptext{
+padding: 4px;
+  }
+  .buttons{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .popbutton{
+    font-size: 1.1rem;
+    font-weight: 400;
+    color:white;
+    width: 70%;
+    margin: 5px;
+/* aspect-ratio: 1; */
+height: 40px;
+border-radius: 5px;
+outline: none;
+border:none;
+  }
+  .popbutton:last-child{
+    background-color: hsl(358, 79%, 66%);
+  }
+  .popbutton:first-child{
+        background-color: hsl(211, 10%, 45%);
+  }
+  .popbutton:last-child:hover{
+    background-color: hsl(357, 100%, 86%);
+  }
+  .popbutton:first-child:hover{
+        background-color: hsl(239, 57%, 85%);
+  }
