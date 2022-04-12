@@ -119,7 +119,7 @@ function Card(props) {
   return (
     <>
       <Popup delete={deletecurrent} setshowpop={setshowpop} show={ showpop}/>
-    <div data-reply  className="commentholder">
+    <div data-reply={props.data-reply!= undefined ? 'true' : 'no'}  className="commentholder">
     <div className='bigscreen rateholder'>
       <div className="inner">
 
