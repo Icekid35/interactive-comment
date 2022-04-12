@@ -50,7 +50,7 @@ let [update,reupdate]=useState(0)
   return (
     <>
       <div {...props} className="box commentholder">
-      <img src={currentuser.image.png} />
+      <img alt='img' src={currentuser.image.png} />
 
         <textarea ref={ textref} defaultValue={initial ? `@${initial}  ` : '' } placeholder="Type in you comment">
 
@@ -138,7 +138,7 @@ function Card(props) {
     <div className='othersholder'>
       <div className='topbar' >
         <div className='firstbar'>
-          <img src={comment.user.image.png} />
+          <img alt='user'src={comment.user.image.png} />
             <div className='name'>{comment.user.username}</div>
               {currentuser.username == comment.user.username ?
                 <div className='you' >you</div> : ''}
