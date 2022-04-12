@@ -52,7 +52,7 @@ let [update,reupdate]=useState(0)
   return (
     <>
   
-      <div {...isreply} className="box commentholder"> 
+      <div data-reply className="box commentholder"> 
      
       <img alt='img' src={currentuser.image.png} />
 
@@ -119,7 +119,7 @@ function Card(props) {
   return (
     <>
       <Popup delete={deletecurrent} setshowpop={setshowpop} show={ showpop}/>
-    <div d{...isreply} className="commentholder">
+    <div data-reply  className="commentholder">
     <div className='bigscreen rateholder'>
       <div className="inner">
 
