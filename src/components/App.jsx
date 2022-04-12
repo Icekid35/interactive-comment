@@ -115,7 +115,8 @@ function Card(props) {
     comment.replies.splice(id,1)
     setChange(Math.random())
   }
-  
+  consoe.log(props)
+  console.log(props.data-reply)
   return (
     <>
       <Popup delete={deletecurrent} setshowpop={setshowpop} show={ showpop}/>
