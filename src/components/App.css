@@ -244,6 +244,7 @@ cursor: context-menu;
    margin: 7px 5px;
    outline: none;
    border: none;
+   resize: none;
   }
   .btn{
     outline: none;
