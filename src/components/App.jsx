@@ -50,7 +50,7 @@ let [update,reupdate]=useState(0)
   return (
     <>
   
-      <div data-reply={props.data-reply} className="box commentholder"> 
+      <div data-reply={props.data-reply ? true : false} className="box commentholder"> 
      
       <img alt='img' src={currentuser.image.png} />
 
@@ -116,7 +116,7 @@ function Card(props) {
   return (
     <>
       <Popup delete={deletecurrent} setshowpop={setshowpop} show={ showpop}/>
-    <div data-reply={props.data-reply} className="commentholder">
+    <div data-reply={props.data-reply : true : false} className="commentholder">
     <div className='bigscreen rateholder'>
       <div className="inner">
 
@@ -345,7 +345,7 @@ let[change,setChange]=useState(0)
 
   return (
     <>
-  <h1>bla bla</h1>
+  <h1 style={{display:'none'}}>bla bla</h1>
     <div className="App">
         <div className="container">
           {ready ?
