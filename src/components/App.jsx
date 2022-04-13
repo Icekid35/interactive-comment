@@ -119,7 +119,7 @@ function Card(props) {
   return (
     <>
       <Popup delete={deletecurrent} setshowpop={setshowpop} show={ showpop}/>
-    <div data-reply={props.isreply != undefined ? 'true' : 'no'}  className="commentholder">
+    <div data-reply={props.isreply}  className="commentholder">
     <div className='bigscreen rateholder'>
       <div className="inner">
 
@@ -299,7 +299,7 @@ function Card(props) {
                               deletecurren(index)
                             }
                             return (
-                        <Card key={com.id} delete={deletecur} changereply={changereply} isreply={true} comment={com} for={comment.user.username} />
+                        <Card key={com.id} delete={deletecur} changereply={changereply} isreply='yes' comment={com} for={comment.user.username} />
                       )
                     })
                     }

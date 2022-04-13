@@ -50,11 +50,11 @@ display:flex;
 background-color: hsl(0, 0%, 100%);
 margin-top: 2rem;
 }
-.commentholder[data-reply="true"]{
+.commentholder[data-reply="yes"]{
   width: 90%;
   margin-top: 1.5rem;
 }
-.commentholder[data-reply=true]::before{
+.commentholder[data-reply="yes"]::before{
   content: '';
   background-color: hsl(211, 10%, 45%);
   height: calc(calc(100 )  + 10px);
