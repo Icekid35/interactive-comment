@@ -52,7 +52,7 @@ let [update,reupdate]=useState(0)
   return (
     <>
   
-      <div data-reply className="box commentholder"> 
+      <div data-reply={props.isreply} className="box commentholder"> 
      
       <img alt='img' src={currentuser.image.png} />
 
@@ -115,12 +115,11 @@ function Card(props) {
     comment.replies.splice(id,1)
     setChange(Math.random())
   }
-  console.log(props)
-  console.log(props.data-reply)
+ 
   return (
     <>
       <Popup delete={deletecurrent} setshowpop={setshowpop} show={ showpop}/>
-    <div data-reply={props != undefined ? 'true' : 'no'}  className="commentholder">
+    <div data-reply={props.isreply != undefined ? 'true' : 'no'}  className="commentholder">
     <div className='bigscreen rateholder'>
       <div className="inner">
 
@@ -300,7 +299,7 @@ function Card(props) {
                               deletecurren(index)
                             }
                             return (
-                        <Card key={com.id} delete={deletecur} changereply={changereply} data-reply={true} comment={com} for={comment.user.username} />
+                        <Card key={com.id} delete={deletecur} changereply={changereply} isreply={true} comment={com} for={comment.user.username} />
                       )
                     })
                     }
@@ -367,7 +366,7 @@ let[change,setChange]=useState(0)
                 }
                 return (
                   <>
-                    <Card delete={deletecur} changereply={changereply} key={comment.id} comment={comment} />
+                    <Card delete={deletecur} changereply={changereply} isreply='noo' key={comment.id} comment={comment} />
 
                   </>
                  
