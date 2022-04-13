@@ -247,6 +247,11 @@ cursor: context-menu;
    resize: none;
    border-color: transparent;
   }
+  [contentEditable]{
+    padding: 5px;
+    min-height: 3.5rem;
+    min-width: 100%;
+  }
   .btn{
     outline: none;
     border: none;

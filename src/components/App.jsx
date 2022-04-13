@@ -120,7 +120,7 @@ function Card(props) {
     <>
       <Popup delete={deletecurrent} setshowpop={setshowpop} show={ showpop}/>
     <div data-reply={props.isreply}  className="commentholder">
-    <div className='bigscreen rateholder'>
+    <div  aria-label='rateholder' className='bigscreen rateholder'>
       <div className="inner">
 
             <button onClick={(e) => {
@@ -142,7 +142,7 @@ function Card(props) {
     </div> 
     <div className='othersholder'>
       <div className='topbar' >
-        <div className='firstbar'>
+        <div aria-label='icon' className='firstbar'>
           <img alt='user'src={comment.user.image.png} />
             <div className='name'>{comment.user.username}</div>
               {currentuser.username == comment.user.username ?
@@ -193,7 +193,7 @@ function Card(props) {
                   setshowreply(!showreply)
             }}>
               <svg width="14" height="13" xmlns="http://www.w3.org/2000/svg"><path d="M.227 4.316 5.04.16a.657.657 0 0 1 1.085.497v2.189c4.392.05 7.875.93 7.875 5.093 0 1.68-1.082 3.344-2.279 4.214-.373.272-.905-.07-.767-.51 1.24-3.964-.588-5.017-4.829-5.078v2.404c0 .566-.664.86-1.085.496L.227 5.31a.657.657 0 0 1 0-.993Z" /></svg>
-              <span>
+              <span aria-label='reply' >
                 Reply
                   </span>
                   </div>
@@ -203,7 +203,7 @@ function Card(props) {
       </div>
       {/* end of the header */}
 
-          <div  className='text'>
+          <div  aria-label='text' className='text'>
             {props.for ? <span contentEditable={false} className='for' >
             @{props.for } 
           </span> :' '} <span ref={ref}> {comment.content}</span>
@@ -348,8 +348,8 @@ let[change,setChange]=useState(0)
 
   return (
     <>
-  <h1 style={{display:'none'}}>bla bla</h1>
-    <div className="App">
+  
+    <main className="App">
         <div className="container">
           {ready ?
             <>
@@ -383,7 +383,7 @@ let[change,setChange]=useState(0)
 
 
     </div>
-    </div>
+    </main>
 </>
       );
 }
