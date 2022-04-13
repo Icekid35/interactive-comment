@@ -56,7 +56,7 @@ Users should be able to:
 
 ## Author
 
-- Website - [Add your name here](https://bello-habeeb.vercel.app)
+- Website - [bello habeeb](https://bello-habeeb.vercel.app)
 - Frontend Mentor - [@icekid35](https://www.frontendmentor.io/profile/Icekid35)
 - Twitter - [@bellohabeeb00](https://www.twitter.com/bellohabeeb00)
 
