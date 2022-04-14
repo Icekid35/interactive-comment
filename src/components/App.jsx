@@ -62,7 +62,7 @@ let [update,reupdate]=useState(0)
      
         <button onClick={(e) => {
 
-        if(textref.current.value.trim()==`@${initial}  ` ) return
+        if(textref.current.value.trim()==`` ) return
           changereply({
             "id": Math.random()*10,
             "content":textref.current.value,
