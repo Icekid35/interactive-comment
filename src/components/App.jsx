@@ -331,8 +331,8 @@ let[change,setChange]=useState(0)
   db()
   function addcomment(value) {
     
-    value=value.trim()
-    if(value=''||value=' ') return
+    
+    if(value.trim()=='') return
     data.comments.unshift(value)
     setChange(Math.random())
     document.querySelector('.commentholder').scrollIntoView({block:'nearest',behaviour:'smooth'})
