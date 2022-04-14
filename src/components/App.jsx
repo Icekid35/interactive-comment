@@ -291,8 +291,8 @@ function Card(props) {
         : ''}
                           {comment.replies && comment.replies.map((com,index)=> {
          function changereply(value) {
-            value=value.trim()
-                if(value.trim()=='') return;
+            
+                if(value.length<=1) return;
 
            if (com.replies==undefined) com.replies=[]
                             com.replies.unshift(value)
@@ -332,7 +332,7 @@ let[change,setChange]=useState(0)
   function addcomment(value) {
     
     
-    if(value.trim()=='') return
+    if(value.length<=1) return
     data.comments.unshift(value)
     setChange(Math.random())
     document.querySelector('.commentholder').scrollIntoView({block:'nearest',behaviour:'smooth'})
@@ -366,7 +366,7 @@ let[change,setChange]=useState(0)
                     
                 }
                 function changereply(value) {
-             if(value.trim()=='') return
+             if(value.length<=1) return
 
                    if (comment.replies==undefined) comment.replies=[]
                    comment.replies.unshift(value)
