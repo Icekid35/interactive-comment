@@ -290,8 +290,11 @@ function Card(props) {
         <CommentBox text='reply' hidereply={setshowreply} changereply={props.changereply} replies={ comment.replies}  />
         : ''}
                           {comment.replies && comment.replies.map((com,index)=> {
-                         function changereply(value) {
-                            if (com.replies==undefined) com.replies=[]
+         function changereply(value) {
+            value=value.trim()
+                if(value.trim()=='') return;
+
+           if (com.replies==undefined) com.replies=[]
                             com.replies.unshift(value)
                                      setChange(Math.random())
                          }
@@ -327,6 +330,9 @@ let[change,setChange]=useState(0)
   }
   db()
   function addcomment(value) {
+    
+    value=value.trim()
+    if(value=''||value=' ') return
     data.comments.unshift(value)
     setChange(Math.random())
     document.querySelector('.commentholder').scrollIntoView({block:'nearest',behaviour:'smooth'})
@@ -360,6 +366,8 @@ let[change,setChange]=useState(0)
                     
                 }
                 function changereply(value) {
+             if(value.trim()=='') return
+
                    if (comment.replies==undefined) comment.replies=[]
                    comment.replies.unshift(value)
                   setChange(Math.random())
